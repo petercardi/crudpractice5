@@ -1,0 +1,9 @@
+<h1>Show Noun</h1>
+
+  <p><b>Noun: </b><%= @noun.name %>
+  <b>Popularity: </b><%= @noun.popularity %>
+  <b>Verbable? </b><%= @noun.verbable %>
+  <b>Written at: </b><%= @noun.created_at %>
+  <b>Overwritten at: </b><%= @noun.updated_at %></p>
+
+<%= link_to "Edit Noun", edit_noun_path(@noun) %>

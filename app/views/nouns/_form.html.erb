@@ -1,0 +1,9 @@
+<%= form_for @noun do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :popularity %>
+  <%= f.number_field :popularity %>
+  <%= f.label :verbable %>
+  <%= f.check_box :verbable %>
+  <%= f.submit %>
+<% end %>

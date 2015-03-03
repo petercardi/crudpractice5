@@ -1,0 +1,20 @@
+<h1>Nouns</h1>
+
+<% if notice %>
+  <%= notice %>
+<% end %>
+
+<% @nouns.each do |noun| %>
+  <p><b><%= link_to noun.name, noun_path(noun) %></b>
+  <b>Popularity: </b><%= noun.popularity %>
+  <b>Verbable? </b><%= noun.verbable %>
+  <b>Written at: </b><%= noun.created_at %>
+  <b>Overwritten at: </b><%= noun.updated_at %></p><hr>
+  <%= link_to "delete", noun_path(noun), method: :delete, data: {confirm: "Are you sure?"} %>
+<% end %>
+
+
+
+<p>
+  <%= link_to "Create Noun", new_noun_path %>
+</p>
